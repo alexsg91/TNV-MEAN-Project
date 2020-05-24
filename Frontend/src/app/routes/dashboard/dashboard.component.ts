@@ -27,8 +27,7 @@ export class DashboardComponent implements OnInit {
   }
 
   goToDetails(id){
-    this.router.navigateByUrl('/details/' + id)
-    console.log("click" + id);
+    this.router.navigateByUrl('/details/' + id);
   }
 
 }

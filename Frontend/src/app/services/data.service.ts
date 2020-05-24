@@ -39,4 +39,8 @@ export class DataService {
     return this.http.delete(this.baseURL + "/" + id)
   }
 
+  editEntry = (data: CovidData) => {
+    return this.http.put('this.baseURL' + data.id, {...data});
+  };
+
 }

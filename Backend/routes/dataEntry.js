@@ -44,7 +44,7 @@ router.post('/', function (req, res, next) {
 });
 
 router.put('/:id', function (req, res, next) {
-    const st_id = req.params.id;
+    const dataId = req.params.id;
     const { country, population, cases, deaths, recoveries, recoveryRate, fatalityRate, continent, classification, date } = req.body;
 
     console.log(req.body);
@@ -62,7 +62,7 @@ router.put('/:id', function (req, res, next) {
         date: date
     }, {
         where: {
-            id: st_id
+            id: dataId
         }
     })
         .then(dataEntry => res.status(201).json({

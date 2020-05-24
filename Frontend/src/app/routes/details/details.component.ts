@@ -13,8 +13,7 @@ export class DetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: DataService, private router : Router) { }
 
   dataEntry: CovidData;
-
-  id;
+  id: number;
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -28,7 +27,6 @@ export class DetailsComponent implements OnInit {
   }
 
   delete(){
-    
     this.dataService.deleteEntry(this.id)
     .subscribe(data => {
       this.router.navigate(['/dashboard']);

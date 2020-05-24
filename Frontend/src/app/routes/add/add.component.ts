@@ -3,7 +3,6 @@ import { NgForm } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
