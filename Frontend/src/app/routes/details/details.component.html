@@ -1,0 +1,25 @@
+<div class="container p-5">
+
+    <div class="row my-2 mx-1">
+        <button class="btn btn-primary mr-5" [routerLink]="['../../']">Back</button>
+        <h3>Details</h3>
+    </div>
+   
+    <div *ngIf="dataEntry != null " class="mt-5 p-5">
+        <ul class="list-group">
+            <li class="list-group-item">Id : {{ dataEntry.id }}</li>
+            <li class="list-group-item">Country : {{dataEntry.country}}</li>
+            <li class="list-group-item">Population: {{dataEntry.population}}</li>
+            <li class="list-group-item">Cases : {{dataEntry.cases}}</li>
+            <li class="list-group-item">Deaths : {{dataEntry.deaths}}</li>
+            <li class="list-group-item">Recoveries : {{dataEntry.recoveries}}</li>
+            <li class="list-group-item">Recovery Rate : {{dataEntry.recoveryRate}}%</li>
+            <li class="list-group-item">Fatality Rate : {{dataEntry.fatalityRate}}%</li>
+            <li class="list-group-item">Continent : {{dataEntry.Continent}}</li>
+            <li class="list-group-item">Classification : {{dataEntry.classification}}</li>
+            <li class="list-group-item">Date : {{dataEntry.date | date :'short' }}</li>
+          </ul>
+    </div>
+
+    <button class="btn btn-danger mt-2" (click)='delete()'>Delete</button>
+</div>
