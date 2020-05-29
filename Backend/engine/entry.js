@@ -122,7 +122,7 @@ const deleteEntry = (req, res) => {
       id: entryId
     }
   })
-    .then(response => {
+    .then( res => {
       return res.status(204).send({});
     })
     .catch(error => {

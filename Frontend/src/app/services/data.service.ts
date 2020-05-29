@@ -29,12 +29,11 @@ export class DataService {
       "recoveries": data.recoveries,
       "recoveryRate": data.recoveryRate,
       "fatalityRate": data.fatalityRate,
-      /* "continent": data.continent,
-      "classification": data.classification, */
+      "continent": data.continent,
+      "classification": data.classification,
       "date": data.date,
-      "continent": "Asia",
-      "classification": "Very low",
-      /* "date": "20200503" */
+      /* "continent": "Asia",
+      "classification": "Very low", */
     });
   };
 

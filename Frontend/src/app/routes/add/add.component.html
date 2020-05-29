@@ -42,19 +42,21 @@
 
         <div class="form-group">
             <label for="Continent">Continent</label>
-            <input type="text" class="form-control" id="continent" required name="continent">
+            <input type="text" class="form-control" id="continent" required ngModel name="continent">
 
-            <!-- <select class="form-control" id="Continent" required ngModel name="Continent">
-                <option *ngFor="let continent in continents"> {{continent}}</option>
+           <!--  <select class="form-control" id="continent" required name="continent">
+                <option *ngFor="let continent of continents"> {{continent}} </option>
             </select> -->
+
+        
         </div>
 
         <div class="form-group">
             <label for="classification">Classification</label>
-            <input type="text" class="form-control" id="classification" required name="classification">
+            <input type="text" class="form-control" id="classification" ngModel required name="classification">
 
-           <!--  <select class="form-control" id="classification" required ngModel name="classification">
-                <option *ngFor="let classification in classifications" > {{classification}}</option>
+            <!-- <select class="form-control" id="classification" required name="classification">
+                <option *ngFor="let classification of classifications" > {{classification}}</option>
             </select> -->
         </div>
 
@@ -63,7 +65,7 @@
             <input type="date" class="form-control" id="date" required ngModel name="date">
         </div>
         
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-success">Submit</button>
 
     </form>
 </div>
