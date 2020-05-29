@@ -23,15 +23,18 @@ export class DataService {
   addEntry = (data: CovidData) => {
     return this.http.post<CovidData>(this.baseURL, {
       "country": data.country,
-        "population": data.population,
-        "cases": data.cases,
-        "deaths": data.deaths,
-        "recoveries": data.recoveries,
-        "recoveryRate": data.recoveryRate,
-        "fatalityRate": data.fatalityRate,
-        "continent": data.Continent,
-        "classification": data.classification,
-        "date": data.date
+      "population": data.population,
+      "cases": data.cases,
+      "deaths": data.deaths,
+      "recoveries": data.recoveries,
+      "recoveryRate": data.recoveryRate,
+      "fatalityRate": data.fatalityRate,
+      /* "continent": data.continent,
+      "classification": data.classification, */
+      "date": data.date,
+      "continent": "Asia",
+      "classification": "Very low",
+      /* "date": "20200503" */
     });
   };
 

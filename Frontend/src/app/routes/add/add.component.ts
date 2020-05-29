@@ -15,6 +15,9 @@ export class AddComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  continents = ["Europe", "America", "Asia", "Oceania", "Africa", "Antartide"]
+  classifications = ["Very low", "Low" , "Medium" , "High" , "Very high"]
+
   onSubmit(form : NgForm){
     this.dataService.addEntry(form.form.value).subscribe(response => {
       console.log(response);

@@ -14,11 +14,12 @@ export class EditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: DataService, private router : Router) { }
 
   dataEntry: CovidData;
+  continents = ["Europe", "America", "Asia", "Oceania", "Africa", "Antartide"]
+  classifications = ["Very low", "Low" , "Medium" , "High" , "Very high"]
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.fetchEntry(id);
-    this.dataEntry.id= id;
   }
 
   fetchEntry(id){
