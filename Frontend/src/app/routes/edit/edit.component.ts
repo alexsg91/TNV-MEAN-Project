@@ -14,6 +14,7 @@ export class EditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private dataService: DataService, private router : Router) { }
 
   dataEntry: CovidData;
+
   continents = ["Europe", "America", "Asia", "Oceania", "Africa", "Antartide"]
   classifications = ["Very low", "Low" , "Medium" , "High" , "Very high"]
 
@@ -29,10 +30,11 @@ export class EditComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.dataEntry);
+    
     this.dataService.editEntry(this.dataEntry)
     .subscribe(response => {
       console.log(response);
-      
       this.router.navigate(['/details', this.dataEntry.id])
     }), err => {
       console.log(err);

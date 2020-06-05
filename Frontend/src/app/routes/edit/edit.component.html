@@ -43,18 +43,18 @@
 
         <div class="form-group">
             <label for="Continent">Continent</label>
-            <input type="text" class="form-control" id="continent" required [(ngModel)]="dataEntry.continent" name="continent">
-           <!--  <select class="form-control" id="Continent" required [(ngModel)]="dataEntry.continent" name="Continent">
+            <!-- <input type="text" class="form-control" id="continent" required [(ngModel)]="dataEntry.continent" name="continent"> -->
+            <select class="form-control" id="Continent" required [(ngModel)]="dataEntry.continent" name="Continent">
                 <option *ngFor="let continent of continents"> {{continent}}</option>
-            </select> -->
+            </select>
         </div>
 
         <div class="form-group">
             <label for="classification">Classification</label>
-            <input type="text" class="form-control" id="classification" required [(ngModel)]="dataEntry.classification" name="classification">
-            <!-- <select class="form-control" id="classification" required [(ngModel)]="dataEntry.classification" name="classification">
+            <!-- <input type="text" class="form-control" id="classification" required [(ngModel)]="dataEntry.classification" name="classification"> -->
+            <select class="form-control" id="classification" required [(ngModel)]="dataEntry.classification" name="classification">
                 <option *ngFor="let classification of classifications" > {{classification}}</option>
-            </select> -->
+            </select>
         </div>
 
         <div class="form-group">

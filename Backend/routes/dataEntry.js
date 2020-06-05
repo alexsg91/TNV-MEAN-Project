@@ -47,8 +47,6 @@ router.put('/:id', function (req, res, next) {
     const dataId = req.params.id;
     const { country, population, cases, deaths, recoveries, recoveryRate, fatalityRate, continent, classification, date } = req.body;
 
-    console.log(req.body);
-
     DataEntry.update({
         country: country,
         population: population,

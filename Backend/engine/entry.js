@@ -95,7 +95,7 @@ const editEntry = (req, res) => {
           if(updated.pop() === 1) {
             return res.status(201).send({
               updated: true,
-              entrytId
+              entryId
             });
           } else {
             return res.status(400).send({

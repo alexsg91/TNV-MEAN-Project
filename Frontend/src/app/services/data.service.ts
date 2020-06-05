@@ -31,9 +31,7 @@ export class DataService {
       "fatalityRate": data.fatalityRate,
       "continent": data.continent,
       "classification": data.classification,
-      "date": data.date,
-      /* "continent": "Asia",
-      "classification": "Very low", */
+      "date": data.date
     });
   };
 
@@ -42,7 +40,19 @@ export class DataService {
   }
 
   editEntry = (data: CovidData) => {
-    return this.http.put('this.baseURL' + data.id, {...data});
+    return this.http.put(this.baseURL + '/' + data.id, {
+      "id": data.id,
+      "country": data.country,
+      "population": data.population,
+      "cases": data.cases,
+      "deaths": data.deaths,
+      "recoveries": data.recoveries,
+      "recoveryRate": data.recoveryRate,
+      "fatalityRate": data.fatalityRate,
+      "continent": data.continent,
+      "classification": data.classification,
+      "date": data.date
+    });
   };
 
 }
